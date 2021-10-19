@@ -2,6 +2,8 @@
 name = "test-files"
 version = "0.1.0"
 edition = "2018"
+description = "temporary file creation convenience library"
+license = "MIT"
 
 [dependencies]
 tempdir = "0.3.7"

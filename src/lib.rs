@@ -167,6 +167,12 @@ impl TestFiles {
     }
 }
 
+impl Default for TestFiles {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
