@@ -2,6 +2,10 @@
 name = "test-files"
 version = "0.1.0"
 edition = "2018"
+description = "temporary file creation convenience library"
+license = "MIT"
+repository = "https://github.com/olidacombe/test-files"
+keywords = ["test", "files", "temporary", "temp", "convenience"]
 
 [dependencies]
 tempdir = "0.3.7"
