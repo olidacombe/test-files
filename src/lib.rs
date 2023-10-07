@@ -60,12 +60,8 @@ impl TestFiles {
     /// use std::fs;
     ///
     /// let temp_dir = test_files::TestFiles::new();
-    /// temp_dir.file("a/b/c.txt", indoc!{"
-    ///     ok
-    /// "})
-    /// .file("b/c/d.txt", indoc!{"
-    ///     fine
-    /// "});
+    /// temp_dir.file("a/b/c.txt", "ok")
+    /// .file("b/c/d.txt", "fine");
     ///
     /// let file_path = temp_dir.path().join("a").join("b").join("c.txt");
     /// let written_content = fs::read_to_string(file_path).unwrap();
@@ -123,12 +119,8 @@ impl TestFiles {
     ///
     /// # fn main() -> test_files::Result<()> {
     /// let temp_dir = test_files::TestFiles::new();
-    /// temp_dir.try_file("a/b/c.txt", indoc!{"
-    ///     ok
-    /// "})?
-    /// .try_file("b/c/d.txt", indoc!{"
-    ///     fine
-    /// "})?;
+    /// temp_dir.try_file("a/b/c.txt", "ok")?
+    /// .try_file("b/c/d.txt", "fine")?;
     ///
     /// let file_path = temp_dir.path().join("a").join("b").join("c.txt");
     /// let written_content = fs::read_to_string(file_path).unwrap();
