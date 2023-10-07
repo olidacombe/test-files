@@ -31,7 +31,7 @@
 //! use the created files in tests or otherwise.  The root of
 //! the temporary directory is exposed by the `.path()` method.
 use std::path::{Path, PathBuf};
-use tempdir::TempDir;
+use tempfile::{tempdir, TempDir};
 use thiserror::Error;
 use touch::file;
 
@@ -163,7 +163,7 @@ impl TestFiles {
     /// assert!(temp_dir.unwrap().path().is_dir());
     /// ```
     pub fn try_new() -> Result<Self> {
-        Ok(Self(TempDir::new(env!("CARGO_PKG_NAME"))?))
+        Ok(Self(tempdir()?))
     }
 }
 

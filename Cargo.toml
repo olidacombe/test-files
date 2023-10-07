@@ -1,6 +1,6 @@
 [package]
 name = "test-files"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2018"
 description = "temporary file creation convenience library"
 license = "MIT"
@@ -8,10 +8,10 @@ repository = "https://github.com/olidacombe/test-files"
 keywords = ["test", "files", "temporary", "temp", "convenience"]
 
 [dependencies]
-tempdir = "0.3.7"
+tempfile = "3.8.0"
 thiserror = "1.0.29"
 touch = "0.0.1"
 
 [dev-dependencies]
-color-eyre = "0.5.11"
-indoc = "1.0.3"
+color-eyre = "0.6.2"
+indoc = "2.0.4"
